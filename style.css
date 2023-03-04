@@ -1,0 +1,339 @@
+/* -------------------- */
+/* custom properties    */
+/* -------------------- */
+
+:root {
+  /* colors */
+  --clr-100: 0 0% 100%; /* f */
+  --clr-200: 341 100% 83%;
+  --clr-300: 341 92% 62%; /* f */
+  --clr-400: 232 10% 56%; /* f */
+  --clr-500: 233 54% 16%; /* f */
+  --clr-600: 234 25% 52%;
+
+  /* gradients */
+  --gr1: 180deg, hsl(13, 100%, 64%) 0%, hsl(322, 87%, 55%) 100%;
+  --gr1-op: 180deg, hsla(13, 100%, 64%, .5) 0%, hsla(322, 87%, 55%, .5) 100%;
+  --gr2: 180deg, hsl(237, 100%, 64%) 0%, hsl(322, 87%, 55%) 100%;
+  --gr2-op: 180deg, hsla(237, 100%, 64%, .5) 0%, hsla(322, 87%, 55%, .5) 100%;
+  --gr3: 180deg, hsl(0, 0%, 100%) 0%, hsl(236, 100%, 97%) 100%;
+
+
+  /* font sizes */
+  --fs-350:	0.875rem;
+  --fs-400:	1rem;
+  --fs-450:	1.125rem;
+  --fs-500:	1.25rem;
+  --fs-550:	1.5rem;
+  --fs-600:	1.75rem;
+  --fs-650:	2rem;
+  --fs-700:	2.25rem;
+  --fs-750:	2.5rem;
+  --fs-800:	3.5rem;
+
+  /* font weights */
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-700: 700;
+  --fw-800: 800;
+
+  /* font family */
+  --ff-serif: 'Plus Jakarta Sans', sans-serif;
+
+  /* border radius */
+  --br-100: .625rem;
+
+}
+
+/* -------------------- */
+/* Reset                */
+/* -------------------- */
+
+/* box sizing */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/* reset margins */
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+/* set up the body */
+body {
+  font-family: var(--ff-serif);
+  color: hsl(var(--clr-400));
+  text-align: left;
+  min-height: 100vh;
+  background: linear-gradient(var(--gr3));
+}
+
+/* set up the images */
+img,
+picture {
+  max-width: 100%;
+}
+
+/* set up the links */
+a {
+  font-family: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* -------------------- */
+/* Utility classes      */
+/* -------------------- */
+
+/* text colors */
+.text-black {color: hsl(var(--clr-500));}
+.text-grey {color: hsl(var(--clr-400));}
+.text-accent {color: hsl(var(--clr-300));}
+.text-white  {color: hsl(var(--clr-100));}
+
+/* buttons */
+.btn {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-700);
+  color: white;
+  padding: 1em 2.375rem;
+  border-radius: 50rem;
+}
+
+/* -------------------- */
+/* components           */
+/* -------------------- */
+
+.container{
+  background-image: url(./assets/image-hero-mobile.webp);
+  background-repeat: no-repeat;
+  background-position: top 433px center;
+}
+.wrapper {
+  padding-inline: 1rem;
+  margin-inline: auto;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 2.1875rem;
+}
+.head__logo {
+  width: 5.5625rem;
+}
+.head__btn {
+  background: hsl(var(--clr-500));
+}
+.hero__head {
+  font-size: var(--fs-750);
+  font-weight: var(--fw-800);
+  line-height: 50px;
+  margin-bottom: 1.625rem;
+}
+.hero__text {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-500);
+  line-height: 1.625rem;
+  margin-bottom: 1.5rem;
+}
+.hero__btn {
+  display: inline-block;
+  background: linear-gradient(var(--gr1));
+  margin-bottom: 25.8125rem;
+}
+.intro {
+  margin-bottom: 5.25rem;
+}
+.intro__head {
+  padding: 1.5rem 1.8125rem 2rem 1.75rem;
+  background: linear-gradient(var(--gr1));
+  border-radius: var(--br-100);
+  font-size: var(--fs-550);
+  font-weight: var(--fw-800);
+  line-height: 2rem;
+  margin-bottom: 2.5rem;
+}
+.intro__card {
+  position: relative;
+  background: hsl(var(--clr-100));
+  border-radius: var(--br-100);
+  padding: 3.5rem 1.8125rem 2rem 1.75rem;
+  margin-bottom: 2.6rem;
+}
+.card__img {
+  position: absolute;
+  top: -1.5rem;
+  left: 1.75rem;
+}
+.card__head {
+  font-size: var(--fs-500);
+  font-weight: var(--fw-800);
+  margin-bottom: 1rem;
+}
+.card__text {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-500);
+  line-height: 1.625rem;
+  margin-bottom: 1.6rem;
+}
+.card__btn {
+  font-size: var(--fs-450);
+  font-weight: var(--fw-700);
+}
+.foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: hsl(var(--clr-500));
+  padding: 2.25rem 1rem;
+}
+.foot__logo {
+  width: 5.5625rem;
+}
+.foot__btn {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-700);
+  padding: .5625rem 1.5rem .6875rem;
+  background: linear-gradient(var(--gr2));
+}
+
+@media (hover: hover) {
+  .head__btn:hover {
+    background-color: hsl(var(--clr-600));
+  }
+  .hero__btn:hover {
+    background: linear-gradient(var(--gr1-op));
+  }
+  .foot__btn:hover {
+    filter: brightness(1.5);
+  }
+}
+
+@media (min-width: 48rem) {
+  .container{
+    background-image: url(./assets/image-hero-tablet.png);
+    background-position: top -92.13px right -297px;
+  }
+  .wrapper {
+    padding-inline: 2.5rem;
+  }
+  .head {
+    padding-top: 1.5rem;
+    padding-bottom: 6.1875rem;
+  }
+  .hero {
+    padding-right: 19.1875rem;
+  }
+  .hero__head {
+    margin-bottom: 1.5625rem;
+  }
+  .hero__btn {
+    margin-bottom: 13.125rem;
+  }
+  .intro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 2.5rem;
+  }
+  .intro__head,
+  .intro__card {
+    width: 339px;
+  }
+  .intro__head {
+    padding-top: 3.5rem;
+    padding-left: 2rem;
+    margin-bottom: 3rem;
+  }
+  .intro__card {
+    padding: 3.5rem 1.375rem 2.1875rem 2rem;
+    margin-bottom: 3rem;
+  }
+  .foot {
+    padding: 2.25rem 2.5rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .container{
+    background-image: url(./assets/image-hero-desktop.png);
+    background-position: top -9.1rem left 49rem;
+  }
+  .wrapper {
+    padding-inline: 10.3125rem;
+  }
+  .head__logo,
+  .foot__logo {
+    width: 7.125rem;
+  }
+  .head__btn {
+    font-size: var(--fs-450);
+    padding: .875rem 2rem;
+  }
+  .head {
+    padding-bottom: 11rem;
+  }
+  .hero {
+    padding-right: 40.8125rem;
+  }
+  .hero__head {
+    font-size: var(--fs-800);
+    line-height: 4.4375rem;
+    margin-bottom: 1.8125rem;
+  }
+  .hero__text {
+    font-size: var(--fs-450);
+    line-height: 1.75rem;
+    margin-bottom: 2.75rem;
+  }
+  .hero__btn {
+    margin-bottom: 16rem;
+    font-size: var(--fs-450);
+  }
+  .intro {
+    gap: 1.875rem;
+    margin-bottom: 5.75rem;
+  }
+  .intro__head,
+  .intro__card {
+    width: 350px;
+  }
+  .intro__head {
+    font-size: var(--fs-650);
+    line-height: 2.5rem;
+    padding-top: 4rem;
+    padding-left: 2rem;
+    margin-bottom: 3rem;
+  }
+  .intro__card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 4.25rem 2rem 2.5rem;
+    margin-bottom: 3.2rem;
+  }
+  .card__head {
+    font-size: var(--fs-550);
+    margin-bottom: 0;
+  }
+  .card__text {
+    font-size: var(--fs-450);
+    line-height: 1.75rem;
+    margin-bottom: auto;
+  }
+  .foot {
+    padding: 2rem 10.3125rem;
+  }
+  .foot__btn {
+    font-size: var(--fs-450);
+    padding: .875rem 2rem;
+  }
+}
